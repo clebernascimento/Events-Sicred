@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Start8">8dp</dimen>
+    <dimen name="Top4">4dp</dimen>
+    <dimen name="Bottom4">4dp</dimen>
+    <dimen name="Top8">8dp</dimen>
+    <dimen name="end8">8dp</dimen>
+    <dimen name="bottom8">8dp</dimen>
+    <dimen name="Bottom16">16dp</dimen>
+    <dimen name="Top16">16dp</dimen>
+    <dimen name="start4">4dp</dimen>
+    <dimen name="end4">4dp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+	<dimen name="Start8">19.2dp</dimen>
+	<dimen name="Top4">9.6dp</dimen>
+	<dimen name="Bottom4">9.6dp</dimen>
+	<dimen name="Top8">19.2dp</dimen>
+	<dimen name="end8">19.2dp</dimen>
+	<dimen name="bottom8">19.2dp</dimen>
+	<dimen name="Bottom16">38.4dp</dimen>
+	<dimen name="Top16">38.4dp</dimen>
+	<dimen name="end4">9.6dp</dimen>
+	<dimen name="start4">9.6dp</dimen>
+</resources>
