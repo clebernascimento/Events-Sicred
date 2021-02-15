@@ -1,4 +1,4 @@
-package com.institutotransire.events.ui
+package com.institutotransire.events.ui.viewActivity
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.institutotransire.events.R
 import com.institutotransire.events.databinding.ActivityMainBinding
+import com.institutotransire.events.ui.viewFragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

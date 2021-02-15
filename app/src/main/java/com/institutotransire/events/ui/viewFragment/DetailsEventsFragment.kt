@@ -1,4 +1,4 @@
-package com.institutotransire.events.ui
+package com.institutotransire.events.ui.viewFragment
 
 import android.annotation.SuppressLint
 import android.content.res.ColorStateList
@@ -21,6 +21,7 @@ import com.institutotransire.events.databinding.FragmentDetailsEventsBinding
 import com.institutotransire.events.services.dataBase.EventsDataSource
 import com.institutotransire.events.services.model.Contains
 import com.institutotransire.events.services.model.DetailsEvents
+import com.institutotransire.events.ui.viewActivity.MainActivity
 import com.institutotransire.events.util.Formatters
 import com.institutotransire.events.util.ImgUtil
 import retrofit2.Call

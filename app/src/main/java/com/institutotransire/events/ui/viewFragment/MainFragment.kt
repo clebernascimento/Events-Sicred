@@ -1,4 +1,4 @@
-package com.institutotransire.events.ui
+package com.institutotransire.events.ui.viewFragment
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -18,8 +18,8 @@ import com.institutotransire.events.adapter.EventsAdapter.OnClick
 import com.institutotransire.events.controller.LoadDialog
 import com.institutotransire.events.databinding.FragmentMainBinding
 import com.institutotransire.events.services.dataBase.EventsDataSource
-import com.institutotransire.events.services.model.Contains
 import com.institutotransire.events.services.model.Events
+import com.institutotransire.events.ui.viewActivity.MainActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

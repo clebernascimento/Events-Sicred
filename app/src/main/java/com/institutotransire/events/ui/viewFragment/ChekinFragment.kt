@@ -1,4 +1,4 @@
-package com.institutotransire.events.ui
+package com.institutotransire.events.ui.viewFragment
 
 import android.os.Bundle
 import android.view.KeyEvent
@@ -8,23 +8,22 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.institutotransire.events.R
-import com.institutotransire.events.controller.LoadDialog
-import com.institutotransire.events.databinding.FragmentErroCheckinBinding
+import com.institutotransire.events.databinding.FragmentChekinBinding
+import com.institutotransire.events.ui.viewActivity.MainActivity
 
-class ErroCheckinFragment : Fragment(), View.OnClickListener {
+class ChekinFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var erroCheckinBinding: FragmentErroCheckinBinding
+    private lateinit var chekinBinding: FragmentChekinBinding
     private var main: MainActivity? = null
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        erroCheckinBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_erro_checkin, container, false)
+        chekinBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_chekin, container, false)
 
         components()
 
-        return erroCheckinBinding.getRoot()
+        return chekinBinding.getRoot()
     }
 
     /**
@@ -33,7 +32,7 @@ class ErroCheckinFragment : Fragment(), View.OnClickListener {
     fun components() {
         main = activity as MainActivity?
 
-        erroCheckinBinding!!.btnCheckinTryAgain.setOnClickListener(this)
+        chekinBinding.btnCheckinSucess.setOnClickListener(this)
 
         onBackPressedFragment()
     }
@@ -43,15 +42,15 @@ class ErroCheckinFragment : Fragment(), View.OnClickListener {
      */
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.btnCheckinTryAgain -> goToHome()
+            R.id.btnCheckinSucess -> goToHome()
         }
     }
 
     /*Metodo para o backSpace do celular*/
     private fun onBackPressedFragment() {
-        erroCheckinBinding.root.isFocusableInTouchMode = true
-        erroCheckinBinding.root.requestFocus()
-        erroCheckinBinding.root.setOnKeyListener { view: View?, i: Int, keyEvent: KeyEvent ->
+        chekinBinding.root.isFocusableInTouchMode = true
+        chekinBinding.root.requestFocus()
+        chekinBinding.root.setOnKeyListener { view: View?, i: Int, keyEvent: KeyEvent ->
             if (i == KeyEvent.KEYCODE_BACK && keyEvent.action == KeyEvent.ACTION_UP) {
                 goToHome()
                 return@setOnKeyListener true
@@ -70,8 +69,9 @@ class ErroCheckinFragment : Fragment(), View.OnClickListener {
         /**
          * Metodo para instaciar o fragmento
          */
-        fun newInstance(): ErroCheckinFragment {
-            return ErroCheckinFragment()
+        @JvmStatic
+        fun newInstance(): ChekinFragment {
+            return ChekinFragment()
         }
     }
 }

@@ -13,8 +13,13 @@
         android:theme="@style/Theme.Events"
         android:usesCleartextTraffic="true">
 
+        <activity android:name=".ui.viewActivity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.viewActivity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
