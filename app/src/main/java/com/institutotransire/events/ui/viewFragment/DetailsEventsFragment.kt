@@ -37,6 +37,7 @@ open class DetailsEventsFragment : Fragment(), View.OnClickListener {
     private var loadDialogEvents: LoadDialog? = null
 
     private val nf = Formatters.numFormat()
+    private val teste = "1321321321321"
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -150,38 +151,26 @@ open class DetailsEventsFragment : Fragment(), View.OnClickListener {
 
         detailsEventsBinding.editEmail.requestFocus()
         if (email.isEmpty()) {
-            errorForm()
+            detailsEventsBinding.editEmail.error = "Campo não pode está vazio!"
             return false
 
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            errorForm()
+            detailsEventsBinding.editEmail.error = "E-mail inválido!"
             return false
         }
 
         detailsEventsBinding.editName.requestFocus()
         if (name.isEmpty()) {
-            errorForm()
+            detailsEventsBinding.editName.error = "Campo não pode está vazio!"
             return false
 
-//        } else if (!name.matches("[a-zA-z]+([ '-][a-zA-Z]+)*")) {
-//            errorForm()
-//            return false
+        } else if (!name.matches("[a-zA-z]+([ '-][a-zA-Z]+)*".toRegex())) {
+            detailsEventsBinding.editName.error = "Nome inváilido!"
+            return false
         }
         return true
     }
-
-    /**
-     * Metodo para erro de Login
-     */
-    fun errorForm() {
-        Snackbar.make(detailsEventsBinding.editName, "Ops! Campo nome ou e-mail incorreto.", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(resources.getColor(R.color.blue_header))
-                .setTextColor(resources.getColor(R.color.white))
-                .setActionTextColor(resources.getColor(R.color.white))
-                .setAction("Fechar") { }
-                .show()
-    }
-
+    
     /**
      * Metodo para validar formulario do login
      */
